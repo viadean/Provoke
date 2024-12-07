@@ -8,17 +8,28 @@ title: Quantifying creators' contributions awkwardly
 graph LR
 
 A@{shape: text, label: "Original creatives"}
-B@{shape: tag-doc, label: "Quantitative contributions"}
+B@{shape: tag-doc, label: "Quantitative<br>contributions"}
 C@{shape: docs, label: "Economic model"}
-A:::c4-...-C:::c3-...-B
+A:::c4
+
+subgraph Mechanics
+C:::c3-...-B:::c2-...-D:::c1
+end
+A-...-Mechanics:::c5
+D-...-E:::c4
+
 D@{shape: bow-rect, label: "revenue streams"}
 E@{shape: text, label: "Creators"}
-B:::c2-...-D:::c1-...-E:::c4
+
 
 classDef c1 fill:#097523
 classDef c2 fill:#097555
 classDef c3 fill:#1f80e0
 classDef c4 color:#e0531f
+classDef c5 fill:#76a2ad
 
 linkStyle 0,1,2,3 stroke:#ff3,stroke-width:4px,color:red;
+
+
+
 ```
